@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 2. Write a JavaScript program that creates a class called "BankAccount" with properties for account number and balance. Include methods to deposit and withdraw money from the account. Create some instances of the "BankAccount" class, deposit some money, and withdraw a portion of it. -->
+
+    <script>
+        class BankAccount {
+            constructor(acc, balance) {
+                this.acc = acc;
+                this.balance = balance;
+                console.log(`Account No: ${this.acc}`);
+                console.log(`opening balance : ${this.balance}`);
+            }
+
+            Deposit(amount) {
+                console.log(`Deposited : ${amount}`);
+                this.balance += amount;
+            }
+
+
+            Withdraw(amount) {
+
+                if (this.balance >= amount) {
+                    console.log(`Withdrawed : ${amount}`);
+                    this.balance -= amount;
+                    console.log(`Account Balance : ${this.balance}`);
+                }
+                else {
+                    console.log(`want to Withdraw : ${amount}`);
+                    console.log(`Insufficent Balance...`);
+                }
+            }
+        }
+
+        let ins = new BankAccount(212121212, 1500)
+        ins.Deposit(500);
+        ins.Withdraw(400);
+        ins.Withdraw(1800);
+
+    </script>
+</body>
+
+</html>

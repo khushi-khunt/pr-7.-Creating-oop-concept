@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Write a JavaScript program to create a class called "Person" with properties for name,
+    age and country. Include a method to display the person's details. Create two instances
+    of the 'Person' class and display their details. -->
+
+
+    <script type="text/JavaScript">
+
+    class person
+    {
+         constructor(name,age,country)
+         {
+              this.name = name;
+              this.age =age;
+              this.country = country;
+         }
+
+         displayDetails()
+         {
+              console.log(`Name : ${this.name}`);
+              console.log(`Age : ${this.age}`);
+              console.log(`Country : ${this.country}`);
+         }
+    }
+
+    let person1 = new person("khushi",20,"CANADA");
+    let person2 = new person("krimisha",2,"London"); 
+
+    console.log(`Detail of person 1`);
+    person1.displayDetails();
+
+    console.log(`Detail of person 1`);
+    person2.displayDetails();
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
